@@ -1,7 +1,6 @@
 ?php
 <?php
 //neveshteh shode tvasatoe #elyas #galikeshi @sudo_avenger
-include('jdf.php');
 ob_start();
 //token ro inja vared konid
 define('API_KEY','223667271:AAFwxR8V5GfMq3eP3Rx-Ggs9glNdEN9CDuM');
@@ -20,8 +19,6 @@ function bot($method,$datas=[]){
         return json_decode($res);
     }
 }
-$boolean = file_get_contents('booleans.txt');
-$booleans= explode("\n",$boolean);
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $message_id = $message->message_id;
@@ -30,7 +27,6 @@ $fname = $message->chat->first_name;
 $uname = $message->chat->username;
 $text1 = $message->text;
 $fadmin = $message->from->id;
-$step= file_get_contents("data/$fadmin/type.txt","a+");
 $chatid = $update->callback_query->message->chat->id;
 $data = $update->callback_query->data;
 $reply = $update->message->reply_to_message->forward_from->id;
@@ -50,41 +46,5 @@ if($text1=="/start"){
  'text'=>"سلام"
 ]);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
