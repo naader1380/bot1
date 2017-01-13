@@ -60,7 +60,7 @@ bot('sendmessage',[
 ]
 ])
 ]);
-}elseif($tex1=="دکمه اول"),($tex1=="دکمه2"){
+}elseif($tex1=="دکمه اول"){
 bot('sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"سلام",
