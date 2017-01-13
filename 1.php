@@ -1,9 +1,8 @@
-?php
 <?php
 //neveshteh shode tvasatoe #elyas #galikeshi @sudo_avenger
 ob_start();
 //token ro inja vared konid
-define('API_KEY','223667271:AAFwxR8V5GfMq3eP3Rx-Ggs9glNdEN9CDuM');
+define('API_KEY','188707250:AAGQUoT-wdOCX2u7iR1VIyewchFHTUGGWyA');
 $admin = "125858918";
 $admin2 = "233503938";
 function bot($method,$datas=[]){
@@ -43,8 +42,37 @@ if($text1=="/start"){
  
  bot('sendmessage',[
  'chat_id'=>$chat_id,
- 'text'=>"سلام"
+ 'text'=>"سلام این بات\n رو ناد  خان ساخته احترام بزار"
 ]);
 }
 
-?>
+
+
+elseif($tex1=="/start"){
+bot('sendmessage',[
+'chat_id'=>$chat_id,
+'text'=>"لطفا یک دکمه انتخاب کنید",
+'reply_markup'=>json_encode([
+'keyboard'=>[
+[
+['text'=>"دکمه2"],['text'=>"دکمه اول"]
+],
+]
+])
+]);
+}elseif($tex1=="دکمه اول"),($tex1=="دکمه2"){
+bot('sendmessage',[
+'chat_id'=>$chat_id,
+'text'=>"سلام",
+
+]);
+
+
+
+
+
+
+
+
+
+؟>
